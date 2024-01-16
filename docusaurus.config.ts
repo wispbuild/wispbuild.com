@@ -31,6 +31,12 @@ const config: Config = {
     locales: ['en'],
   },
 
+  markdown: {
+    mermaid: true
+  },
+
+  themes: ['@docusaurus/theme-mermaid'],
+
   presets: [
     [
       'classic',
@@ -89,6 +95,12 @@ const config: Config = {
       style: 'dark',
       links: [],
       copyright: `Copyright © ${new Date().getFullYear()} Wisp Build. By <a href="https://github.com/nathanhammond">@nathanhammond</a>.`,
+    },
+    mermaid: {
+      theme: {
+        light: 'neutral',
+        dark: 'forest'
+      },
     },
     prism: {
       theme: prismThemes.github,
