@@ -82,11 +82,13 @@ const config: Config = {
         {
           href: 'https://discord.gg/JBfRavr3ef',
           label: 'Discord',
+          className: "header-discord-link",
           position: 'right',
         },
         {
           href: 'https://github.com/wispbuild/wispbuild.com',
           label: 'GitHub',
+          className: "header-github-link",
           position: 'right',
         },
       ],
