@@ -105,6 +105,7 @@ const config: Config = {
       },
     },
     prism: {
+      additionalLanguages: ['bash'],
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
     },
