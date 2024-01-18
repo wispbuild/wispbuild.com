@@ -1,6 +1,7 @@
 ---
 slug: .
 title: Build Theory
+sidebar_position: 1
 ---
 
 # Build Theory

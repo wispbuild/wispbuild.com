@@ -10,32 +10,29 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
+    title: 'Incrementally Adoptable',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Wisp Build is designed to get you where you want to be, no matter where you're starting from.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
+    title: 'Tightly Integrated',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Wisp Build works seamlessly with GitHub Actions. You won't have to change your workflow.
       </>
     ),
   },
   {
-    title: 'Powered by React',
+    title: 'Class Redefining',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Wisp Build doesn't let existing tools set a ceiling for build system authoring experience.
       </>
     ),
   },

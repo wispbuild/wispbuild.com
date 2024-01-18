@@ -69,15 +69,27 @@ const config: Config = {
     navbar: {
       title: 'Wisp Build',
       logo: {
-        alt: 'My Site Logo',
+        alt: 'Wisp Build',
         src: 'img/logo.svg',
       },
       items: [
         {
-          type: 'docSidebar',
-          sidebarId: 'theory',
-          position: 'right',
+          to: 'theory',
           label: 'Build Theory',
+          position: 'left',
+          activeBasePath: "theory",
+        },
+        {
+          to: 'cli',
+          label: 'CLI',
+          position: 'left',
+          activeBasePath: "cli",
+        },
+        {
+          to: 'configuration',
+          label: 'Configuration',
+          position: 'left',
+          activeBasePath: "configuration",
         },
         {
           href: 'https://discord.gg/JBfRavr3ef',

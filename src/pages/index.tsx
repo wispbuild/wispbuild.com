@@ -23,7 +23,7 @@ function HomepageHeader() {
 export default function Home(): JSX.Element {
   return (
     <Layout
-      description="Description will go into a meta tag in <head />">
+      description="Wisp Build is an incrementally-adoptable build system designed to migrate you from shell scripts to reproducible guarantees.">
       <HomepageHeader />
       <main>
         <HomepageFeatures />
