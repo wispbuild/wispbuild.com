@@ -1,5 +1,5 @@
 ---
 slug: .
-title: 'CLI Reference'
+title: Guides
 sidebar_position: 2
 ---

@@ -77,19 +77,16 @@ const config: Config = {
           to: 'theory',
           label: 'Build Theory',
           position: 'left',
-          activeBasePath: "theory",
         },
         {
-          to: 'cli',
-          label: 'CLI',
+          to: 'guides',
+          label: 'Guides',
           position: 'left',
-          activeBasePath: "cli",
         },
         {
-          to: 'configuration',
-          label: 'Configuration',
+          to: 'reference',
+          label: 'Reference',
           position: 'left',
-          activeBasePath: "configuration",
         },
         {
           href: 'https://discord.gg/JBfRavr3ef',
