@@ -15,10 +15,12 @@
     "typecheck": "tsc"
   },
   "dependencies": {
+    "@cloudflare/workers-types": "^4.20240117.0",
     "@docusaurus/core": "3.1.0",
     "@docusaurus/preset-classic": "3.1.0",
     "@docusaurus/theme-mermaid": "^3.1.0",
     "@mdx-js/react": "^3.0.0",
+    "@vercel/og": "^0.6.2",
     "clsx": "^2.0.0",
     "prism-react-renderer": "^2.3.0",
     "react": "^18.0.0",
@@ -44,5 +46,10 @@
   },
   "engines": {
     "node": ">=18.0"
+  },
+  "pnpm": {
+    "patchedDependencies": {
+      "@vercel/og@0.6.2": "patches/@vercel__og@0.6.2.patch"
+    }
   }
 }

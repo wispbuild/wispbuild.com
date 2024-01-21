@@ -1,6 +1,21 @@
 import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
+import { writeFileSync } from 'fs';
+
+const encodeOgComponent = (strings, ...inputs) => {
+  let output = "";
+  let encoded = inputs.map(input => encodeURIComponent(input));
+  for (let i = 0; i < strings.length; i++) {
+    output += strings[i];
+    if (encoded[i]) {
+      output += encoded[i];
+    }
+  }
+  return output;
+}
+
+const ogAllowList = [];
 
 const config: Config = {
   title: 'Wisp Build',
@@ -32,7 +47,19 @@ const config: Config = {
   },
 
   markdown: {
-    mermaid: true
+    mermaid: true,
+    parseFrontMatter: async (params) => {
+      const result = await params.defaultParseFrontMatter(params);
+
+      if (!result.frontMatter.image) {
+        result.frontMatter.image = encodeOgComponent`/og?header=${"Wisp Build"}&subheader=${result.frontMatter.title}`
+      }
+
+      ogAllowList.push(result.frontMatter.image);
+      writeFileSync('./functions/og-allow-list.json', JSON.stringify(ogAllowList));
+
+      return result;      
+    }
   },
 
   themes: ['@docusaurus/theme-mermaid'],
@@ -64,8 +91,6 @@ const config: Config = {
   ],
 
   themeConfig: {
-    // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
     navbar: {
       title: 'Wisp Build',
       logo: {

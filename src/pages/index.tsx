@@ -5,6 +5,7 @@ import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import Heading from '@theme/Heading';
 
 import styles from './index.module.css';
+import Head from '@docusaurus/Head';
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
@@ -22,12 +23,18 @@ function HomepageHeader() {
 
 export default function Home(): JSX.Element {
   return (
-    <Layout
-      description="Wisp Build is an incrementally-adoptable build system designed to migrate you from shell scripts to reproducible guarantees.">
-      <HomepageHeader />
-      <main>
-        <HomepageFeatures />
-      </main>
-    </Layout>
+    <>
+      <Head>
+        <meta name="og:image" content="/og" />
+        <meta name="twitter:image" content="/og" />
+      </Head>
+      <Layout
+        description="Wisp Build is an incrementally-adoptable build system designed to migrate you from shell scripts to reproducible guarantees.">
+        <HomepageHeader />
+        <main>
+          <HomepageFeatures />
+        </main>
+      </Layout>
+    </>
   );
 }
